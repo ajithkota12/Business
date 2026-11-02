@@ -9,12 +9,12 @@ interface DenominationSelectorProps {
 }
 
 export default function DenominationSelector({ product }: DenominationSelectorProps) {
-  const { t, getDenominationLabel } = useLanguage();
+  const { t, language, getDenominationLabel } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selected = product.denominations[selectedIndex];
 
-  // Check if current denomination qualifies for BUY 10 + GET 1 FREE
-  const isOfferApplicable = selected.packetValue === '₹2' && selected.offerId === 'buy10get1';
+  // Check if current denomination qualifies for BUY 10 + GET 1 FREE (₹2 or ₹5)
+  const isOfferApplicable = Boolean(selected.offerId && (selected.packetValue === '₹2' || selected.packetValue === '₹5'));
 
   return (
     <div className="space-y-6">
@@ -31,7 +31,7 @@ export default function DenominationSelector({ product }: DenominationSelectorPr
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
           {product.denominations.map((denom, idx) => {
-            const hasDenomOffer = denom.packetValue === '₹2' && denom.offerId === 'buy10get1';
+            const hasDenomOffer = Boolean(denom.offerId && (denom.packetValue === '₹2' || denom.packetValue === '₹5'));
             const isTenRupee = denom.packetValue === '₹10';
             const isSelected = selectedIndex === idx;
 
@@ -97,7 +97,9 @@ export default function DenominationSelector({ product }: DenominationSelectorPr
             <span>{t.common.specialOfferScheme}</span>
           </div>
           <p className="text-xs text-emerald-800 leading-relaxed">
-            {t.common.bonusSheetDesc}
+            {language === 'te'
+              ? `ఈ ${selected.packetValue} ప్యాకెట్ రకం 10 షీట్లు ఆర్డర్ చేయండి, 1 అదనపు షీట్ ఉచితంగా పొందండి.`
+              : `Order 10 sheets of this ${selected.packetValue} packet variety and receive 1 extra sheet free.`}
           </p>
         </div>
       ) : (

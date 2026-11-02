@@ -40,7 +40,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Offer badge */}
         {product.offers.length > 0 && product.inStock && (
           <div className="absolute top-2.5 right-2.5 shadow-sm">
-            <OfferBadge offer={product.offers[0]} size="sm" />
+            <OfferBadge offers={product.offers} size="sm" />
           </div>
         )}
       </Link>
@@ -97,9 +97,23 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="flex items-center gap-1.5 text-[11px] text-emerald-800 bg-emerald-50 rounded-lg p-1.5 font-medium border border-emerald-100">
             <Gift className="h-3.5 w-3.5 text-emerald-700 shrink-0" />
             <span className="truncate">
-              {language === 'te'
-                ? '10 షీట్లు కొంటే 1 ఉచితం (₹2 రకం)'
-                : 'Buy 10 Sheets + Get 1 Free (₹2 variety)'}
+              {(() => {
+                const has2 = product.offers.some((o) => o.applicableDenomination === '₹2');
+                const has5 = product.offers.some((o) => o.applicableDenomination === '₹5');
+                if (has2 && has5) {
+                  return language === 'te'
+                    ? '10 షీట్లు కొంటే 1 ఉచితం (₹2 & ₹5 రకాలు)'
+                    : 'Buy 10 Sheets + Get 1 Free (₹2 & ₹5 varieties)';
+                }
+                if (has5) {
+                  return language === 'te'
+                    ? '10 షీట్లు కొంటే 1 ఉచితం (₹5 రకం)'
+                    : 'Buy 10 Sheets + Get 1 Free (₹5 variety)';
+                }
+                return language === 'te'
+                  ? '10 షీట్లు కొంటే 1 ఉచితం (₹2 రకం)'
+                  : 'Buy 10 Sheets + Get 1 Free (₹2 variety)';
+              })()}
             </span>
           </div>
         )}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Gift, CheckCircle2, AlertCircle } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
@@ -7,7 +8,23 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function OffersPage() {
   const { t } = useLanguage();
-  const productsWithOffers = PRODUCTS.filter((p) => p.offers.length > 0 && p.inStock);
+  const [offerFilter, setOfferFilter] = useState<'all' | '₹2' | '₹5'>('all');
+
+  const productsWithOffers = PRODUCTS.filter((p) => {
+    if (!p.inStock || p.offers.length === 0) return false;
+    if (offerFilter === 'all') return true;
+    return p.offers.some((o) => o.applicableDenomination === offerFilter);
+  });
+
+  const twoRupeeCount = PRODUCTS.filter(
+    (p) => p.inStock && p.offers.some((o) => o.applicableDenomination === '₹2')
+  ).length;
+
+  const fiveRupeeCount = PRODUCTS.filter(
+    (p) => p.inStock && p.offers.some((o) => o.applicableDenomination === '₹5')
+  ).length;
+
+  const allOfferCount = PRODUCTS.filter((p) => p.inStock && p.offers.length > 0).length;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -52,7 +69,7 @@ export default function OffersPage() {
 
       {/* Qualifying Products Grid */}
       <div>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               {t.offersPage.qualifyingProductsTitle}
@@ -67,6 +84,43 @@ export default function OffersPage() {
           >
             {t.common.allProducts} <ArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2 mb-6">
+          <button
+            type="button"
+            onClick={() => setOfferFilter('all')}
+            className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              offerFilter === 'all'
+                ? 'bg-emerald-700 text-white shadow-xs'
+                : 'bg-white border border-slate-200 text-slate-700 hover:border-emerald-500'
+            }`}
+          >
+            {t.offersPage.filterAll} ({allOfferCount})
+          </button>
+          <button
+            type="button"
+            onClick={() => setOfferFilter('₹2')}
+            className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              offerFilter === '₹2'
+                ? 'bg-emerald-700 text-white shadow-xs'
+                : 'bg-white border border-slate-200 text-slate-700 hover:border-emerald-500'
+            }`}
+          >
+            {t.offersPage.filterTwoRupee} ({twoRupeeCount})
+          </button>
+          <button
+            type="button"
+            onClick={() => setOfferFilter('₹5')}
+            className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              offerFilter === '₹5'
+                ? 'bg-emerald-700 text-white shadow-xs'
+                : 'bg-white border border-slate-200 text-slate-700 hover:border-emerald-500'
+            }`}
+          >
+            {t.offersPage.filterFiveRupee} ({fiveRupeeCount})
+          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

@@ -114,14 +114,18 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       if (packetValue === '₹2') {
         return hasOffer ? '₹2 ప్యాకెట్ రకం (ప్రత్యేక ఆఫర్)' : '₹2 ప్యాకెట్ రకం';
       }
-      if (packetValue === '₹5') return '₹5 ప్యాకెట్ రకం';
+      if (packetValue === '₹5') {
+        return hasOffer ? '₹5 ప్యాకెట్ రకం (ప్రత్యేక ఆఫర్)' : '₹5 ప్యాకెట్ రకం';
+      }
       if (packetValue === '₹10') return '₹10 ప్యాకెట్ రకం';
       return `${packetValue} ప్యాకెట్ రకం`;
     }
     if (packetValue === '₹2') {
       return hasOffer ? '₹2 Packet Variety (Special Offer)' : '₹2 Packet Variety';
     }
-    if (packetValue === '₹5') return '₹5 Packet Variety';
+    if (packetValue === '₹5') {
+      return hasOffer ? '₹5 Packet Variety (Special Offer)' : '₹5 Packet Variety';
+    }
     if (packetValue === '₹10') return '₹10 Packet Variety';
     return `${packetValue} Packet Variety`;
   };

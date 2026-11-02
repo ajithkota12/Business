@@ -141,6 +141,9 @@ export interface Translations {
     sheetDisplayCards: string;
     qualifyingProductsTitle: string;
     qualifyingProductsDesc: string;
+    filterAll: string;
+    filterTwoRupee: string;
+    filterFiveRupee: string;
   };
   aboutPage: {
     pageTitle: string;
@@ -276,8 +279,8 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       promoTag: 'Special Wholesale Promotion',
       promoTitle: 'BUY 10 + GET 1 FREE',
       promoDesc:
-        'Buy 10 sheets of the ₹2 packet variety and get 1 extra sheet free. Applicable strictly to ₹2 packet varieties only.',
-      applicableVarieties: 'Applicable Varieties:',
+        'Buy 10 sheets of ₹2 or ₹5 packet varieties and get 1 extra sheet free! Designed for retail kirana stores and bulk stockists.',
+      applicableVarieties: 'Applicable Varieties: ₹2 & ₹5 Packets',
       viewOfferDetails: 'View Offer Details',
     },
     statsSection: {
@@ -288,7 +291,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       varietiesVal: '₹2, ₹5, ₹10',
       varietiesLabel: 'Packet Varieties',
       offerVal: '10 + 1 Free',
-      offerLabel: 'Offer on ₹2 Varieties',
+      offerLabel: 'Offer on ₹2 & ₹5 Varieties',
     },
     ctaSection: {
       title: 'Have a Wholesale Requirement?',
@@ -323,7 +326,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       callPromptBooking: 'Call Directly for Instant Sheet Availability & Booking:',
       highlight1: 'Transparent plastic packets for clear product visibility',
       highlight2: 'Ready-to-hang card sheets suited for kirana and general store counters',
-      highlight3: 'Transparent sheet pricing with special BUY 10 + GET 1 FREE on ₹2 varieties',
+      highlight3: 'Transparent sheet pricing with special BUY 10 + GET 1 FREE on ₹2 & ₹5 varieties',
       highlight4: 'Wholesale supply with prompt order turnaround',
       relatedTitle: 'Other Products in Category',
       viewCategory: 'View Category',
@@ -333,17 +336,20 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     offersPage: {
       title: 'Special Wholesale Offers',
       subtitle: 'Current promotional schemes for retail store orders',
-      activePromoBadge: 'ACTIVE PROMOTION',
+      activePromoBadge: 'ACTIVE WHOLESALE PROMOTION',
       offerDetailsDesc:
-        'Buy 10 sheets of the ₹2 packet variety and get 1 extra sheet free. This promotion is designed for retail kirana stores and bulk stockists.',
-      check1: 'Applicable to ₹2 packet varieties of the qualifying products below.',
-      note: 'Note: This offer does NOT apply to ₹5 or ₹10 packet varieties.',
-      qualifyingVariety: 'Qualifying Variety',
-      twoRupeePackets: '₹2 Packets',
+        'Buy 10 sheets of any qualifying ₹2 or ₹5 packet variety and get 1 extra sheet completely free. This promotion is designed for retail kirana stores and bulk stockists.',
+      check1: 'Applicable to both ₹2 and ₹5 packet varieties of the qualifying products below.',
+      note: 'Note: This offer applies to ₹2 and ₹5 packet varieties; does not apply to ₹10 variety.',
+      qualifyingVariety: 'Qualifying Varieties',
+      twoRupeePackets: '₹2 & ₹5 Packets',
       sheetDisplayCards: 'Sheet Display Cards',
       qualifyingProductsTitle: 'Products Qualifying for BUY 10 + GET 1 FREE',
       qualifyingProductsDesc:
-        'Select the ₹2 packet variety on these products to receive the bonus sheet.',
+        'Select ₹2 or ₹5 packet varieties on qualifying products to receive the bonus sheet.',
+      filterAll: 'All Offers (₹2 & ₹5)',
+      filterTwoRupee: '₹2 Variety Offers',
+      filterFiveRupee: '₹5 Variety Offers',
     },
     aboutPage: {
       pageTitle: 'About Wholesale Packet & Sheet Supply',
@@ -484,8 +490,8 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       promoTag: 'ప్రత్యేక హోల్‌సేల్ ప్రమోషన్',
       promoTitle: '10 కొనండి + 1 షీట్ ఉచితం',
       promoDesc:
-        '₹2 ప్యాకెట్ రకం 10 షీట్లు కొనుగోలు చేయండి, 1 అదనపు షీట్ ఉచితంగా పొందండి. ఇది కేవలం ₹2 ప్యాకెట్ రకాలకు మాత్రమే వర్తిస్తుంది.',
-      applicableVarieties: 'ఆఫర్ వర్తించే రకాలు:',
+        '₹2 లేదా ₹5 ప్యాకెట్ రకాలపై 10 షీట్లు కొనుగోలు చేయండి, 1 అదనపు షీట్ ఉచితంగా పొందండి! కిరాణా దుకాణాలు మరియు హోల్‌సేల్ వర్తకుల కోసం.',
+      applicableVarieties: 'ఆఫర్ వర్తించే రకాలు: ₹2 & ₹5 ప్యాకెట్లు',
       viewOfferDetails: 'ఆఫర్ వివరాలు చూడండి',
     },
     statsSection: {
@@ -496,7 +502,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       varietiesVal: '₹2, ₹5, ₹10',
       varietiesLabel: 'ప్యాకెట్ రకాలు',
       offerVal: '10 + 1 ఉచితం',
-      offerLabel: '₹2 రకాలపై ఆఫర్',
+      offerLabel: '₹2 & ₹5 రకాలపై ఆఫర్',
     },
     ctaSection: {
       title: 'హోల్‌సేల్ సరుకులు కావాలా?',
@@ -531,7 +537,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       callPromptBooking: 'తక్షణ స్టాక్ లభ్యత & బుకింగ్ కోసం నేరుగా కాల్ చేయండి:',
       highlight1: 'వస్తువు నాణ్యత స్పష్టంగా కనిపించే పారదర్శక ప్యాకెట్లు',
       highlight2: 'కిరాణా మరియు జనరల్ స్టోర్ కౌంటర్లలో వేలాడదీయడానికి సిద్ధంగా ఉన్న కార్డ్ షీట్లు',
-      highlight3: 'పారదర్శక షీట్ ధరలు మరియు ₹2 రకాలపై 10 కొంటే 1 ఉచితం ఆఫర్',
+      highlight3: 'పారదర్శక షీట్ ధరలు మరియు ₹2 & ₹5 రకాలపై 10 కొంటే 1 ఉచితం ఆఫర్',
       highlight4: 'హోల్‌సేల్ సప్లై మరియు తక్షణ రవాణా',
       relatedTitle: 'ఈ విభాగంలోని ఇతర వస్తువులు',
       viewCategory: 'విభాగం చూడండి',
@@ -541,17 +547,20 @@ export const TRANSLATIONS: Record<Language, Translations> = {
     offersPage: {
       title: 'ప్రత్యేక హోల్‌సేల్ ఆఫర్లు',
       subtitle: 'రిటైల్ దుకాణాల కోసం ప్రస్తుత ఆఫర్ పథకాలు',
-      activePromoBadge: 'యాక్టివ్ ఆఫర్',
+      activePromoBadge: 'యాక్టివ్ హోల్‌సేల్ ఆఫర్',
       offerDetailsDesc:
-        '₹2 ప్యాకెట్ రకానికి చెందిన 10 షీట్లు కొనుగోలు చేస్తే 1 అదనపు షీట్ ఉచితంగా పొందండి. ఈ ఆఫర్ కిరాణా దుకాణాలు మరియు హోల్‌సేల్ వ్యాపారుల కోసం ప్రత్యేకంగా రూపొందించబడింది.',
-      check1: 'దిగువ ఇవ్వబడిన అర్హత కలిగిన వస్తువుల ₹2 ప్యాకెట్ రకాలకు మాత్రమే వర్తిస్తుంది.',
-      note: 'గమనిక: ఈ ఆఫర్ ₹5 లేదా ₹10 ప్యాకెట్ రకాలకు వర్తించదు.',
-      qualifyingVariety: 'అర్హత కలిగిన రకం',
-      twoRupeePackets: '₹2 ప్యాకెట్లు',
+        'అర్హత కలిగిన ఏదైనా ₹2 లేదా ₹5 ప్యాకెట్ రకానికి చెందిన 10 షీట్లు కొనుగోలు చేస్తే 1 అదనపు షీట్ పూర్తిగా ఉచితంగా పొందండి. ఈ ఆఫర్ కిరాణా దుకాణాలు మరియు హోల్‌సేల్ వ్యాపారుల కోసం ప్రత్యేకంగా రూపొందించబడింది.',
+      check1: 'దిగువ ఇవ్వబడిన వస్తువుల ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు వర్తిస్తుంది.',
+      note: 'గమనిక: ఈ ఆఫర్ ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు మాత్రమే వర్తిస్తుంది; ₹10 ప్యాకెట్ రకాలకు వర్తించదు.',
+      qualifyingVariety: 'అర్హత కలిగిన రకాలు',
+      twoRupeePackets: '₹2 & ₹5 ప్యాకెట్లు',
       sheetDisplayCards: 'షీట్ డిస్ప్లే కార్డులు',
       qualifyingProductsTitle: '10 కొంటే 1 ఉచితం ఆఫర్ వర్తించే వస్తువులు',
       qualifyingProductsDesc:
-        'ఉచిత షీట్ పొందడానికి ఈ వస్తువులలో ₹2 ప్యాకెట్ రకాన్ని ఎంచుకోండి.',
+        'ఉచిత షీట్ పొందడానికి ఈ వస్తువులలో ₹2 లేదా ₹5 ప్యాకెట్ రకాలను ఎంచుకోండి.',
+      filterAll: 'అన్ని ఆఫర్లు (₹2 & ₹5)',
+      filterTwoRupee: '₹2 రకాల ఆఫర్లు',
+      filterFiveRupee: '₹5 రకాల ఆఫర్లు',
     },
     aboutPage: {
       pageTitle: 'హోల్‌సేల్ ప్యాకెట్ & షీట్ సప్లై గురించి',
@@ -630,17 +639,17 @@ export const PRODUCT_TRANSLATIONS: Record<
     teluguTitle: 'జీడిపప్పు',
     englishTitle: 'Jeedi Pappu (Cashew Nuts)',
     teluguDesc:
-      'నాణ్యమైన జీడిపప్పు పారదర్శక ప్యాకెట్లలో డిస్ప్లే కార్డ్ షీట్లపై ప్యాక్ చేయబడింది. రిటైల్ కౌంటర్లలో విక్రయించడానికి సిద్ధంగా ఉంటుంది.',
+      'నాణ్యమైన జీడిపప్పు పారదర్శక ప్యాకెట్లలో డిస్ప్లే కార్డ్ షీట్లపై ప్యాక్ చేయబడింది. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Premium whole cashew nuts (Jeedi Pappu) carefully packed in transparent plastic sachets on display cards. Crisp, clean, and ready for retail counter sale.',
+      'Premium whole cashew nuts (Jeedi Pappu) carefully packed in transparent plastic sachets on display cards. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-kismis': {
     teluguTitle: 'కిస్మిస్',
     englishTitle: 'Kismis (Raisins)',
     teluguDesc:
-      'సహజమైన తీపి మరియు సమానమైన పరిమాణం కలిగిన బంగారు కిస్మిస్ పారదర్శక ప్యాకెట్లలో లభిస్తుంది.',
+      'సహజమైన తీపి మరియు సమానమైన పరిమాణం కలిగిన బంగారు కిస్మిస్ పారదర్శక ప్యాకెట్లలో లభిస్తుంది. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Selected golden seedless raisins (Kismis) packed in transparent plastic sachets. Uniform size and natural sweetness.',
+      'Selected golden seedless raisins (Kismis) packed in transparent plastic sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-baadam-pappu': {
     teluguTitle: 'బాదం పప్పు',
@@ -654,90 +663,90 @@ export const PRODUCT_TRANSLATIONS: Record<
     teluguTitle: 'కొబ్బరి',
     englishTitle: 'Kobbari (Dry Coconut Pieces)',
     teluguDesc:
-      'వంటలకు మరియు పూజలకు అనువైన స్వచ్ఛమైన ఎండిన కొబ్బరి ముక్కలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి.',
+      'వంటలకు మరియు పూజలకు అనువైన స్వచ్ఛమైన ఎండిన కొబ్బరి ముక్కలు. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Clean dry coconut copra pieces (Kobbari) packed in transparent sachets. Ideal for daily culinary and puja requirements.',
+      'Clean dry coconut copra pieces (Kobbari) packed in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-sonti': {
     teluguTitle: 'శొంటి',
     englishTitle: 'Sonti (Dry Ginger)',
     teluguDesc:
-      'ఔషధ గుణాలు మరియు ఘాటైన సువాసన కలిగిన నాణ్యమైన శొంటి పారదర్శక ప్యాకెట్లలో లభిస్తుంది.',
+      'ఔషధ గుణాలు మరియు ఘాటైన సువాసన కలిగిన నాణ్యమైన శొంటి. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Sun-dried whole dry ginger roots (Sonti / Sonth) packed in clean transparent plastic sachets. Pure quality with rich aroma and natural pungency.',
+      'Sun-dried whole dry ginger roots (Sonti / Sonth) packed in clean transparent plastic sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-ealukalu': {
     teluguTitle: 'ఏలకులు',
     englishTitle: 'Ealukalu (Green Cardamom)',
     teluguDesc:
-      'తీపి వంటకాలకు మరియు టీకి మంచి సువాసననిచ్చే పచ్చి ఏలకులు పారదర్శక ప్యాకెట్లలో లభిస్తాయి.',
+      'తీపి వంటకాలకు మరియు టీకి మంచి సువాసననిచ్చే పచ్చి ఏలకులు. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Whole aromatic green cardamom pods (Ealukalu / Elaichi) packed in transparent clear packets. High volatile oil content and authentic fragrance.',
+      'Whole aromatic green cardamom pods (Ealukalu / Elaichi) packed in transparent clear packets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-dhaniyalu': {
     teluguTitle: 'ధనియాలు',
     englishTitle: 'Dhaniyalu (Coriander Seeds)',
     teluguDesc:
-      'స్వచ్ఛమైన ధనియాలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి. ₹2 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
+      'స్వచ్ఛమైన ధనియాలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి. ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Clean whole coriander seeds (Dhaniyalu / Sabut Dhania) in transparent sachets. Special BUY 10 + GET 1 FREE offer applies exclusively to the ₹2 packet variety.',
+      'Clean whole coriander seeds (Dhaniyalu / Sabut Dhania) in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
   },
   'p-ghasa-ghasalu': {
     teluguTitle: 'గసగసాలు',
     englishTitle: 'Ghasa Ghasalu (Poppy Seeds)',
     teluguDesc:
-      'స్వచ్ఛమైన తెల్లటి గసగసాలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి. ₹5 రకం షీట్ ₹45. ₹2 రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
+      'స్వచ్ఛమైన తెల్లటి గసగసాలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి. ₹5 రకం షీట్ ₹45. ₹2 మరియు ₹5 రకాలకు 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Fine white poppy seeds (Ghasa Ghasalu / Khus Khus) packed in clear transparent plastic sachets. Note ₹5 variety is ₹45 per sheet. Special BUY 10 + GET 1 FREE offer applies to ₹2 packet variety.',
+      'Fine white poppy seeds (Ghasa Ghasalu / Khus Khus) packed in clear transparent plastic sachets. Note ₹5 variety is ₹45 per sheet. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
   },
   'p-dhalchina-chekka': {
     teluguTitle: 'దాల్చిన చెక్క',
     englishTitle: 'Dhalchina Chekka (Cinnamon Bark)',
     teluguDesc:
-      'సువాసన కలిగిన నాణ్యమైన దాల్చిన చెక్క ముక్కలు. ₹2 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
+      'సువాసన కలిగిన నాణ్యమైన దాల్చిన చెక్క ముక్కలు. ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Aromatic cinnamon bark pieces (Dhalchina Chekka / Dalchini) in clear transparent plastic packets. BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Aromatic cinnamon bark pieces (Dhalchina Chekka / Dalchini) in clear transparent plastic packets. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
   },
   'p-lavangalu': {
     teluguTitle: 'లవంగాలు',
     englishTitle: 'Lavangalu (Cloves)',
     teluguDesc:
-      'గుండ్రని మొగ్గలు కలిగిన స్వచ్ఛమైన లవంగాలు. ₹2 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
+      'గుండ్రని మొగ్గలు కలిగిన స్వచ్ఛమైన లవంగాలు. ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Whole aromatic cloves (Lavangalu / Laung) with intact round heads packed in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Whole aromatic cloves (Lavangalu / Laung) with intact round heads packed in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
   },
   'p-miriyalu': {
     teluguTitle: 'మిరియాలు',
     englishTitle: 'Miriyalu (Black Pepper)',
     teluguDesc:
-      'మంచి ఘాటు మరియు సువాసన కలిగిన నల్ల మిరియాలు పారదర్శక ప్యాకెట్లలో లభిస్తాయి.',
+      'మంచి ఘాటు మరియు సువాసన కలిగిన నల్ల మిరియాలు. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Whole dried black peppercorns (Miriyalu / Kali Mirch) packed in transparent plastic sachets. Bold berries with strong pungency and fresh heat.',
+      'Whole dried black peppercorns (Miriyalu / Kali Mirch) packed in transparent plastic sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-chintapandu': {
     teluguTitle: 'చింతపండు',
     englishTitle: 'Chintapandu (Tamarind)',
     teluguDesc:
-      'గింజలు మరియు ఈనెలు తొలగించిన శుభ్రమైన చింతపండు పారదర్శక ప్యాకెట్లలో లభిస్తుంది.',
+      'గింజలు మరియు ఈనెలు తొలగించిన శుభ్రమైన చింతపండు. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Clean seedless sour tamarind (Chintapandu / Imli) compressed into handy retail packets. Free from impurities, ideal for daily sambar, rasam, and cooking.',
+      'Clean seedless sour tamarind (Chintapandu / Imli) compressed into handy retail packets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
   },
   'p-mashala': {
     teluguTitle: 'మసాలా',
     englishTitle: 'Mashala (Garam Masala Mix)',
     teluguDesc:
-      'ధనియాలు, వెల్లుల్లి, కొబ్బరి మరియు దాల్చిన చెక్కల సమపాళ్ల సాంప్రదాయ మిశ్రమం.',
+      'ధనియాలు, వెల్లుల్లి, కొబ్బరి మరియు దాల్చిన చెక్కల సమపాళ్ల సాంప్రదాయ మిశ్రమం. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Wholesale blend of traditional whole spices. Ingredients include Dhaniyalu, Yelli Payalu (Garlic), Kobbari (Dry Coconut) and Dhalchina Chekka (Cinnamon).',
+      'Wholesale blend of traditional whole spices. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
     teluguIngredients: ['ధనియాలు', 'వెల్లుల్లి', 'కొబ్బరి', 'దాల్చిన చెక్క'],
   },
   'p-biryani-dhinsulu': {
     teluguTitle: 'బిర్యానీ దినుసులు',
     englishTitle: 'Biryani Dhinsulu (Biryani Spices Mix)',
     teluguDesc:
-      'రుచికరమైన బిర్యానీ తయారీకి అవసరమైన అన్ని రకాల హోల్ స్పైసెస్ మిశ్రమం.',
+      'రుచికరమైన బిర్యానీ తయారీకి అవసరమైన అన్ని రకాల హోల్ స్పైసెస్ మిశ్రమం. ₹5 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Complete whole biryani spice mix in handy transparent sachets. Perfect ratio of whole aromatic spices for authentic biryani and pulao preparation.',
+      'Complete whole biryani spice mix in handy transparent sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹5 packet variety.',
     teluguIngredients: [
       'బిర్యానీ ఆకు',
       'లవంగాలు',
@@ -753,9 +762,9 @@ export const PRODUCT_TRANSLATIONS: Record<
     teluguTitle: 'జీలకర్ర',
     englishTitle: 'Jilakara (Cumin Seeds)',
     teluguDesc:
-      'స్వచ్ఛమైన జీలకర్ర పారదర్శక ప్యాకెట్లలో లభిస్తుంది. ₹2 ప్యాకెట్ రకానికి 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
+      'స్వచ్ఛమైన జీలకర్ర పారదర్శక ప్యాకెట్లలో లభిస్తుంది. ₹2 మరియు ₹5 ప్యాకెట్ రకాలకు 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది.',
     englishDesc:
-      'Whole clean cumin seeds (Jilakara / Jeera) packed in clear transparent plastic sachets. Natural earthy fragrance. Special BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Whole clean cumin seeds (Jilakara / Jeera) packed in clear transparent plastic sachets. Natural earthy fragrance. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
   },
   'p-kobbari-podi': {
     teluguTitle: 'కొబ్బరి పొడి',

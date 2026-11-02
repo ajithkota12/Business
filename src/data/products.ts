@@ -3,10 +3,10 @@ import type { CategoryMeta, Offer, Product } from '../types';
 // ─── Special Wholesale Offers ──────────────────────────────────────────────────
 // Defined centrally and mapped to specific products and packet denominations.
 
-export const BUY_10_GET_1_FREE: Offer = {
-  id: 'buy10get1',
-  label: 'BUY 10 + GET 1 FREE',
-  description: 'Buy 10 sheets of ₹2 packet variety and get 1 sheet free (Applicable only to ₹2 packet variety).',
+export const BUY_10_GET_1_FREE_2RS: Offer = {
+  id: 'buy10get1-2rs',
+  label: 'BUY 10 + GET 1 FREE (₹2)',
+  description: 'Buy 10 sheets of ₹2 packet variety and get 1 sheet free (Applicable to ₹2 packet variety).',
   applicableDenomination: '₹2',
   applicableProductIds: [
     'p-dhaniyalu',
@@ -19,8 +19,37 @@ export const BUY_10_GET_1_FREE: Offer = {
   badgeColor: 'green',
 };
 
+export const BUY_10_GET_1_FREE_5RS: Offer = {
+  id: 'buy10get1-5rs',
+  label: 'BUY 10 + GET 1 FREE (₹5)',
+  description: 'Buy 10 sheets of ₹5 packet variety and get 1 sheet free (Applicable to ₹5 packet variety).',
+  applicableDenomination: '₹5',
+  applicableProductIds: [
+    'p-jeedi-pappu',
+    'p-kismis',
+    'p-kobbari',
+    'p-sonti',
+    'p-ealukalu',
+    'p-dhaniyalu',
+    'p-ghasa-ghasalu',
+    'p-dhalchina-chekka',
+    'p-lavangalu',
+    'p-miriyalu',
+    'p-chintapandu',
+    'p-mashala',
+    'p-biryani-dhinsulu',
+    'p-jilakara',
+  ],
+  freeItemDescription: '1 extra sheet on purchase of 10 sheets',
+  badgeColor: 'green',
+};
+
+export const BUY_10_GET_1_FREE: Offer = BUY_10_GET_1_FREE_2RS;
+
 export const OFFERS: Record<string, Offer> = {
-  buy10get1: BUY_10_GET_1_FREE,
+  buy10get1: BUY_10_GET_1_FREE_2RS,
+  'buy10get1-2rs': BUY_10_GET_1_FREE_2RS,
+  'buy10get1-5rs': BUY_10_GET_1_FREE_5RS,
 };
 
 // ─── Categories ───────────────────────────────────────────────────────────────
@@ -75,11 +104,12 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -89,9 +119,9 @@ export const PRODUCTS: Product[] = [
         minOrder: 1,
       },
     ],
-    tags: ['jeedi pappu', 'cashew', 'kaju', 'dry fruits', 'nuts'],
+    tags: ['jeedi pappu', 'cashew', 'kaju', 'dry fruits', 'nuts', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.8,
     reviewCount: 38,
@@ -111,11 +141,12 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -125,9 +156,9 @@ export const PRODUCTS: Product[] = [
         minOrder: 1,
       },
     ],
-    tags: ['kismis', 'raisins', 'kishmish', 'dry fruits'],
+    tags: ['kismis', 'raisins', 'kishmish', 'dry fruits', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.7,
     reviewCount: 26,
@@ -176,16 +207,17 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
     ],
-    tags: ['kobbari', 'dry coconut', 'copra', 'groceries'],
+    tags: ['kobbari', 'dry coconut', 'copra', 'groceries', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: false,
     rating: 4.6,
     reviewCount: 29,
@@ -205,11 +237,12 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -219,9 +252,9 @@ export const PRODUCTS: Product[] = [
         minOrder: 1,
       },
     ],
-    tags: ['sonti', 'dry ginger', 'sonth', 'whole spices'],
+    tags: ['sonti', 'dry ginger', 'sonth', 'whole spices', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: false,
     rating: 4.5,
     reviewCount: 18,
@@ -241,11 +274,12 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -255,15 +289,15 @@ export const PRODUCTS: Product[] = [
         minOrder: 1,
       },
     ],
-    tags: ['ealukalu', 'cardamom', 'elaichi', 'whole spices', 'aromatic'],
+    tags: ['ealukalu', 'cardamom', 'elaichi', 'whole spices', 'aromatic', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.8,
     reviewCount: 35,
   },
 
-  // 7. Dhaniyalu (HAS OFFER ON ₹2 VARIETY)
+  // 7. Dhaniyalu (HAS OFFERS ON ₹2 & ₹5 VARIETIES)
   {
     id: 'p-dhaniyalu',
     name: 'Dhaniyalu',
@@ -272,7 +306,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Wholesale Standard',
     category: 'whole-spices',
     description:
-      'Clean whole coriander seeds (Dhaniyalu / Sabut Dhania) in transparent sachets. Special BUY 10 + GET 1 FREE offer applies exclusively to the ₹2 packet variety.',
+      'Clean whole coriander seeds (Dhaniyalu / Sabut Dhania) in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
     image: '/images/products/dhaniyalu_packet.jpg',
     sheetPrice: 30,
     denominations: [
@@ -282,14 +316,15 @@ export const PRODUCTS: Product[] = [
         pricePerSheet: 30,
         pricePerPacket: 30,
         minOrder: 1,
-        offerId: 'buy10get1',
+        offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -301,13 +336,13 @@ export const PRODUCTS: Product[] = [
     ],
     tags: ['dhaniyalu', 'coriander seeds', 'dhania', 'whole spices', 'offer'],
     inStock: true,
-    offers: [BUY_10_GET_1_FREE],
+    offers: [BUY_10_GET_1_FREE_2RS, BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.7,
     reviewCount: 48,
   },
 
-  // 8. Ghasa Ghasalu (HAS OFFER ON ₹2 VARIETY, ₹5 is ₹45)
+  // 8. Ghasa Ghasalu (HAS OFFERS ON ₹2 & ₹5 VARIETIES, ₹5 is ₹45)
   {
     id: 'p-ghasa-ghasalu',
     name: 'Ghasa Ghasalu',
@@ -316,7 +351,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Wholesale Standard',
     category: 'grocery-items',
     description:
-      'Fine white poppy seeds (Ghasa Ghasalu / Khus Khus) packed in clear transparent plastic sachets. Note ₹5 variety is ₹45 per sheet. Special BUY 10 + GET 1 FREE offer applies to ₹2 packet variety.',
+      'Fine white poppy seeds (Ghasa Ghasalu / Khus Khus) packed in clear transparent plastic sachets. Note ₹5 variety is ₹45 per sheet. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
     image: '/images/products/ghasa_ghasalu_packet.jpg',
     sheetPrice: 30,
     denominations: [
@@ -326,14 +361,15 @@ export const PRODUCTS: Product[] = [
         pricePerSheet: 30,
         pricePerPacket: 30,
         minOrder: 1,
-        offerId: 'buy10get1',
+        offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 45,
         pricePerPacket: 45,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -345,13 +381,13 @@ export const PRODUCTS: Product[] = [
     ],
     tags: ['ghasa ghasalu', 'poppy seeds', 'khus khus', 'spices', 'offer'],
     inStock: true,
-    offers: [BUY_10_GET_1_FREE],
+    offers: [BUY_10_GET_1_FREE_2RS, BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.8,
     reviewCount: 31,
   },
 
-  // 9. Dhalchina Chekka (HAS OFFER ON ₹2 VARIETY)
+  // 9. Dhalchina Chekka (HAS OFFERS ON ₹2 & ₹5 VARIETIES)
   {
     id: 'p-dhalchina-chekka',
     name: 'Dhalchina Chekka',
@@ -360,7 +396,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Wholesale Standard',
     category: 'whole-spices',
     description:
-      'Aromatic cinnamon bark pieces (Dhalchina Chekka / Dalchini) in clear transparent plastic packets. BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Aromatic cinnamon bark pieces (Dhalchina Chekka / Dalchini) in clear transparent plastic packets. BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
     image: '/images/products/dhalchina_chekka_packet.jpg',
     sheetPrice: 30,
     denominations: [
@@ -370,14 +406,15 @@ export const PRODUCTS: Product[] = [
         pricePerSheet: 30,
         pricePerPacket: 30,
         minOrder: 1,
-        offerId: 'buy10get1',
+        offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -389,13 +426,13 @@ export const PRODUCTS: Product[] = [
     ],
     tags: ['dhalchina chekka', 'cinnamon', 'dalchini', 'whole spices', 'offer'],
     inStock: true,
-    offers: [BUY_10_GET_1_FREE],
+    offers: [BUY_10_GET_1_FREE_2RS, BUY_10_GET_1_FREE_5RS],
     featured: false,
     rating: 4.6,
     reviewCount: 27,
   },
 
-  // 10. Lavangalu (HAS OFFER ON ₹2 VARIETY)
+  // 10. Lavangalu (HAS OFFERS ON ₹2 & ₹5 VARIETIES)
   {
     id: 'p-lavangalu',
     name: 'Lavangalu',
@@ -404,7 +441,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Wholesale Standard',
     category: 'whole-spices',
     description:
-      'Whole aromatic cloves (Lavangalu / Laung) with intact round heads packed in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Whole aromatic cloves (Lavangalu / Laung) with intact round heads packed in transparent sachets. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
     image: '/images/products/lavangalu_packet.jpg',
     sheetPrice: 30,
     denominations: [
@@ -414,14 +451,15 @@ export const PRODUCTS: Product[] = [
         pricePerSheet: 30,
         pricePerPacket: 30,
         minOrder: 1,
-        offerId: 'buy10get1',
+        offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -433,7 +471,7 @@ export const PRODUCTS: Product[] = [
     ],
     tags: ['lavangalu', 'cloves', 'laung', 'whole spices', 'offer'],
     inStock: true,
-    offers: [BUY_10_GET_1_FREE],
+    offers: [BUY_10_GET_1_FREE_2RS, BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.8,
     reviewCount: 39,
@@ -453,11 +491,12 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -467,9 +506,9 @@ export const PRODUCTS: Product[] = [
         minOrder: 1,
       },
     ],
-    tags: ['miriyalu', 'black pepper', 'kali mirch', 'whole spices'],
+    tags: ['miriyalu', 'black pepper', 'kali mirch', 'whole spices', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: false,
     rating: 4.7,
     reviewCount: 22,
@@ -489,16 +528,17 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
     ],
-    tags: ['chintapandu', 'tamarind', 'imli', 'groceries'],
+    tags: ['chintapandu', 'tamarind', 'imli', 'groceries', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: false,
     rating: 4.5,
     reviewCount: 19,
@@ -524,16 +564,17 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
     ],
-    tags: ['mashala', 'masala', 'garam masala', 'spices', 'blend'],
+    tags: ['mashala', 'masala', 'garam masala', 'spices', 'blend', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.9,
     reviewCount: 44,
@@ -561,22 +602,23 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
     ],
-    tags: ['biryani dhinsulu', 'biryani spices', 'whole spices', 'khada masala'],
+    tags: ['biryani dhinsulu', 'biryani spices', 'whole spices', 'khada masala', 'offer'],
     inStock: true,
-    offers: [],
+    offers: [BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.8,
     reviewCount: 36,
   },
 
-  // 15. Jilakara (HAS OFFER ON ₹2 VARIETY)
+  // 15. Jilakara (HAS OFFERS ON ₹2 & ₹5 VARIETIES)
   {
     id: 'p-jilakara',
     name: 'Jilakara',
@@ -585,7 +627,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Wholesale Standard',
     category: 'whole-spices',
     description:
-      'Whole clean cumin seeds (Jilakara / Jeera) packed in clear transparent plastic sachets. Natural earthy fragrance. Special BUY 10 + GET 1 FREE offer applies to the ₹2 packet variety.',
+      'Whole clean cumin seeds (Jilakara / Jeera) packed in clear transparent plastic sachets. Natural earthy fragrance. Special BUY 10 + GET 1 FREE offer applies to ₹2 and ₹5 packet varieties.',
     image: '/images/products/jilakara_packet.jpg',
     sheetPrice: 30,
     denominations: [
@@ -595,14 +637,15 @@ export const PRODUCTS: Product[] = [
         pricePerSheet: 30,
         pricePerPacket: 30,
         minOrder: 1,
-        offerId: 'buy10get1',
+        offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety',
+        label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
         minOrder: 1,
+        offerId: 'buy10get1-5rs',
       },
       {
         label: '₹10 Packet Variety',
@@ -614,7 +657,7 @@ export const PRODUCTS: Product[] = [
     ],
     tags: ['jilakara', 'cumin seeds', 'jeera', 'whole spices', 'offer'],
     inStock: true,
-    offers: [BUY_10_GET_1_FREE],
+    offers: [BUY_10_GET_1_FREE_2RS, BUY_10_GET_1_FREE_5RS],
     featured: true,
     rating: 4.7,
     reviewCount: 41,
