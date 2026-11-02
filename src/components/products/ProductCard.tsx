@@ -107,12 +107,12 @@ export default function ProductCard({ product }: ProductCardProps) {
                 }
                 if (has5) {
                   return language === 'te'
-                    ? '10 షీట్లు కొంటే 1 ఉచితం (₹5 రకం)'
-                    : 'Buy 10 Sheets + Get 1 Free (₹5 variety)';
+                    ? '10 షీట్లు కొంటే 1 ఉచితం (₹5 రకాలు)'
+                    : 'Buy 10 Sheets + Get 1 Free (₹5 varieties)';
                 }
                 return language === 'te'
-                  ? '10 షీట్లు కొంటే 1 ఉచితం (₹2 రకం)'
-                  : 'Buy 10 Sheets + Get 1 Free (₹2 variety)';
+                  ? '10 షీట్లు కొంటే 1 ఉచితం (₹2 రకాలు)'
+                  : 'Buy 10 Sheets + Get 1 Free (₹2 varieties)';
               })()}
             </span>
           </div>

@@ -6,7 +6,7 @@ import type { CategoryMeta, Offer, Product } from '../types';
 export const BUY_10_GET_1_FREE_2RS: Offer = {
   id: 'buy10get1-2rs',
   label: 'BUY 10 + GET 1 FREE (₹2)',
-  description: 'Buy 10 sheets of ₹2 packet variety and get 1 sheet free (Applicable to ₹2 packet variety).',
+  description: 'Buy 10 sheets of ₹2 packet varieties and get 1 sheet free (Applicable to ₹2 packet varieties).',
   applicableDenomination: '₹2',
   applicableProductIds: [
     'p-dhaniyalu',
@@ -22,7 +22,7 @@ export const BUY_10_GET_1_FREE_2RS: Offer = {
 export const BUY_10_GET_1_FREE_5RS: Offer = {
   id: 'buy10get1-5rs',
   label: 'BUY 10 + GET 1 FREE (₹5)',
-  description: 'Buy 10 sheets of ₹5 packet variety and get 1 sheet free (Applicable to ₹5 packet variety).',
+  description: 'Buy 10 sheets of ₹5 packet varieties and get 1 sheet free (Applicable to ₹5 packet varieties).',
   applicableDenomination: '₹5',
   applicableProductIds: [
     'p-jeedi-pappu',
@@ -104,7 +104,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -141,7 +141,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -178,7 +178,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 90,
     denominations: [
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -207,7 +207,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 50,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 50,
         pricePerPacket: 50,
@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 50,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 50,
         pricePerPacket: 50,
@@ -245,7 +245,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -274,7 +274,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -282,7 +282,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -311,7 +311,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 30,
     denominations: [
       {
-        label: '₹2 Packet Variety (Special Offer)',
+        label: '₹2 Packet Varieties (Special Offer)',
         packetValue: '₹2',
         pricePerSheet: 30,
         pricePerPacket: 30,
@@ -319,7 +319,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -327,7 +327,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -356,7 +356,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 30,
     denominations: [
       {
-        label: '₹2 Packet Variety (Special Offer)',
+        label: '₹2 Packet Varieties (Special Offer)',
         packetValue: '₹2',
         pricePerSheet: 30,
         pricePerPacket: 30,
@@ -364,7 +364,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 45,
         pricePerPacket: 45,
@@ -372,7 +372,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -401,7 +401,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 30,
     denominations: [
       {
-        label: '₹2 Packet Variety (Special Offer)',
+        label: '₹2 Packet Varieties (Special Offer)',
         packetValue: '₹2',
         pricePerSheet: 30,
         pricePerPacket: 30,
@@ -409,7 +409,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -417,7 +417,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -446,7 +446,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 30,
     denominations: [
       {
-        label: '₹2 Packet Variety (Special Offer)',
+        label: '₹2 Packet Varieties (Special Offer)',
         packetValue: '₹2',
         pricePerSheet: 30,
         pricePerPacket: 30,
@@ -454,7 +454,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -462,7 +462,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -491,7 +491,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -499,7 +499,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -528,7 +528,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -564,7 +564,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 50,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 50,
         pricePerPacket: 50,
@@ -602,7 +602,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 40,
     denominations: [
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -632,7 +632,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 30,
     denominations: [
       {
-        label: '₹2 Packet Variety (Special Offer)',
+        label: '₹2 Packet Varieties (Special Offer)',
         packetValue: '₹2',
         pricePerSheet: 30,
         pricePerPacket: 30,
@@ -640,7 +640,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-2rs',
       },
       {
-        label: '₹5 Packet Variety (Special Offer)',
+        label: '₹5 Packet Varieties (Special Offer)',
         packetValue: '₹5',
         pricePerSheet: 40,
         pricePerPacket: 40,
@@ -648,7 +648,7 @@ export const PRODUCTS: Product[] = [
         offerId: 'buy10get1-5rs',
       },
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,
@@ -677,7 +677,7 @@ export const PRODUCTS: Product[] = [
     sheetPrice: 90,
     denominations: [
       {
-        label: '₹10 Packet Variety',
+        label: '₹10 Packet Varieties',
         packetValue: '₹10',
         pricePerSheet: 90,
         pricePerPacket: 90,

@@ -98,8 +98,8 @@ export default function DenominationSelector({ product }: DenominationSelectorPr
           </div>
           <p className="text-xs text-emerald-800 leading-relaxed">
             {language === 'te'
-              ? `ఈ ${selected.packetValue} ప్యాకెట్ రకం 10 షీట్లు ఆర్డర్ చేయండి, 1 అదనపు షీట్ ఉచితంగా పొందండి.`
-              : `Order 10 sheets of this ${selected.packetValue} packet variety and receive 1 extra sheet free.`}
+              ? `ఈ ${selected.packetValue} ప్యాకెట్ రకాల 10 షీట్లు ఆర్డర్ చేయండి, 1 అదనపు షీట్ ఉచితంగా పొందండి.`
+              : `Order 10 sheets of these ${selected.packetValue} packet varieties and receive 1 extra sheet free.`}
           </p>
         </div>
       ) : (

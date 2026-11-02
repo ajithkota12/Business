@@ -112,22 +112,22 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const getDenominationLabel = (packetValue: string, hasOffer?: boolean) => {
     if (language === 'te') {
       if (packetValue === '₹2') {
-        return hasOffer ? '₹2 ప్యాకెట్ రకం (ప్రత్యేక ఆఫర్)' : '₹2 ప్యాకెట్ రకం';
+        return hasOffer ? '₹2 ప్యాకెట్ రకాలు (ప్రత్యేక ఆఫర్)' : '₹2 ప్యాకెట్ రకాలు';
       }
       if (packetValue === '₹5') {
-        return hasOffer ? '₹5 ప్యాకెట్ రకం (ప్రత్యేక ఆఫర్)' : '₹5 ప్యాకెట్ రకం';
+        return hasOffer ? '₹5 ప్యాకెట్ రకాలు (ప్రత్యేక ఆఫర్)' : '₹5 ప్యాకెట్ రకాలు';
       }
-      if (packetValue === '₹10') return '₹10 ప్యాకెట్ రకం';
-      return `${packetValue} ప్యాకెట్ రకం`;
+      if (packetValue === '₹10') return '₹10 ప్యాకెట్ రకాలు';
+      return `${packetValue} ప్యాకెట్ రకాలు`;
     }
     if (packetValue === '₹2') {
-      return hasOffer ? '₹2 Packet Variety (Special Offer)' : '₹2 Packet Variety';
+      return hasOffer ? '₹2 Packet Varieties (Special Offer)' : '₹2 Packet Varieties';
     }
     if (packetValue === '₹5') {
-      return hasOffer ? '₹5 Packet Variety (Special Offer)' : '₹5 Packet Variety';
+      return hasOffer ? '₹5 Packet Varieties (Special Offer)' : '₹5 Packet Varieties';
     }
-    if (packetValue === '₹10') return '₹10 Packet Variety';
-    return `${packetValue} Packet Variety`;
+    if (packetValue === '₹10') return '₹10 Packet Varieties';
+    return `${packetValue} Packet Varieties`;
   };
 
   return (

@@ -174,13 +174,23 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {offerProducts.map((p) => {
                     const pTrans = getProductTranslation(p.id);
+                    const has2 = p.offers.some((o) => o.applicableDenomination === '₹2');
+                    const has5 = p.offers.some((o) => o.applicableDenomination === '₹5');
+                    let denomText = '';
+                    if (has2 && has5) {
+                      denomText = language === 'te' ? '(₹2 & ₹5 రకాలు)' : '(₹2 & ₹5 Varieties)';
+                    } else if (has5) {
+                      denomText = language === 'te' ? '(₹5 రకాలు)' : '(₹5 Varieties)';
+                    } else if (has2) {
+                      denomText = language === 'te' ? '(₹2 రకాలు)' : '(₹2 Varieties)';
+                    }
                     return (
                       <Link
                         key={p.id}
                         to={`/products/${p.id}`}
                         className="text-xs bg-white/10 hover:bg-white/20 border border-white/20 px-2.5 sm:px-3 py-1 rounded-lg text-white font-medium transition-colors"
                       >
-                        {pTrans.title} {language === 'te' ? '(₹2 రకం)' : '(₹2 Variety)'}
+                        {pTrans.title} {denomText}
                       </Link>
                     );
                   })}
