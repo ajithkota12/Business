@@ -204,13 +204,13 @@ export const PRODUCTS: Product[] = [
     description:
       'Clean dry coconut copra pieces (Kobbari) packed in transparent sachets. Ideal for daily culinary and puja requirements.',
     image: '/images/products/kobbari_packet.jpg',
-    sheetPrice: 40,
+    sheetPrice: 50,
     denominations: [
       {
         label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
-        pricePerSheet: 40,
-        pricePerPacket: 40,
+        pricePerSheet: 50,
+        pricePerPacket: 50,
         minOrder: 1,
         offerId: 'buy10get1-5rs',
       },
@@ -234,13 +234,13 @@ export const PRODUCTS: Product[] = [
     description:
       'Whole dried ginger pieces (Sonti / Sukku) packed in clear transparent plastic sachets. Natural pungent aroma and medicinal spice value.',
     image: '/images/products/sonti_packet.jpg',
-    sheetPrice: 40,
+    sheetPrice: 50,
     denominations: [
       {
         label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
-        pricePerSheet: 40,
-        pricePerPacket: 40,
+        pricePerSheet: 50,
+        pricePerPacket: 50,
         minOrder: 1,
         offerId: 'buy10get1-5rs',
       },
@@ -561,13 +561,13 @@ export const PRODUCTS: Product[] = [
       'Dhalchina Chekka (Cinnamon Bark)',
     ],
     image: '/images/products/mashala_packet.jpg',
-    sheetPrice: 40,
+    sheetPrice: 50,
     denominations: [
       {
         label: '₹5 Packet Variety (Special Offer)',
         packetValue: '₹5',
-        pricePerSheet: 40,
-        pricePerPacket: 40,
+        pricePerSheet: 50,
+        pricePerPacket: 50,
         minOrder: 1,
         offerId: 'buy10get1-5rs',
       },

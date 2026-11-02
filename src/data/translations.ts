@@ -253,9 +253,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       rangeTitle: 'Wholesale Range',
       rangeDesc: 'Whole spices, dry fruits, masalas & groceries',
       ratesTitle: 'Wholesale Sheet Rates',
-      ratesDesc: 'Transparent ₹30, ₹40, ₹45 & ₹90 sheet rates',
+      ratesDesc: 'Transparent ₹30, ₹40, ₹45, ₹50 & ₹90 sheet rates',
       offerTitle: 'Buy 10 + Get 1 Free',
-      offerDesc: 'Special offer on ₹2 packet varieties',
+      offerDesc: 'Special offer on ₹2 & ₹5 packet varieties',
     },
     categoriesSection: {
       title: 'Browse by Category',
@@ -375,9 +375,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       denom2Desc:
         'Available on Dhaniyalu, Ghasa Ghasalu, Dhalchina Chekka, Lavangalu, and Jilakara. Qualifies for BUY 10 + GET 1 FREE offer!',
       denom5Title: '₹5 Packet Variety',
-      denom5Price: '₹40 – ₹45 / sheet',
+      denom5Price: '₹40 – ₹50 / sheet',
       denom5Desc:
-        'Standard rate is ₹40 per sheet across spices and dry fruits. Ghasa Ghasalu (poppy seeds) is ₹45 per sheet.',
+        'Standard rate is ₹40 per sheet across spices and dry fruits. Ghasa Ghasalu is ₹45, and Kobbari, Sonti & Mashala are ₹50 per sheet.',
       denom10Title: '₹10 Packet Variety',
       denom10Price: '₹90 / sheet',
       denom10Desc:
@@ -464,9 +464,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       rangeTitle: 'విస్తృత శ్రేణి',
       rangeDesc: 'పోపు దినుసులు, డ్రై ఫ్రూట్స్, మసాలాలు & నిత్యావసరాలు',
       ratesTitle: 'హోల్‌సేల్ షీట్ ధరలు',
-      ratesDesc: 'స్పష్టమైన ₹30, ₹40, ₹45 & ₹90 షీట్ రేట్లు',
+      ratesDesc: 'స్పష్టమైన ₹30, ₹40, ₹45, ₹50 & ₹90 షీట్ రేట్లు',
       offerTitle: '10 కొంటే 1 ఉచితం',
-      offerDesc: '₹2 ప్యాకెట్ రకాలపై ప్రత్యేక ఆఫర్',
+      offerDesc: '₹2 & ₹5 ప్యాకెట్ రకాలపై ప్రత్యేక ఆఫర్',
     },
     categoriesSection: {
       title: 'విభాగాల వారీగా చూడండి',
@@ -586,9 +586,9 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       denom2Desc:
         'ధనియాలు, గసగసాలు, దాల్చిన చెక్క, లవంగాలు మరియు జీలకర్రలలో లభిస్తుంది. 10 కొంటే 1 ఉచితం ఆఫర్ వర్తిస్తుంది!',
       denom5Title: '₹5 ప్యాకెట్ రకం',
-      denom5Price: '₹40 – ₹45 / షీట్',
+      denom5Price: '₹40 – ₹50 / షీట్',
       denom5Desc:
-        'మసాలాలు మరియు డ్రై ఫ్రూట్స్‌లో ప్రామాణిక రేటు ₹40. గసగసాలు మాత్రం షీట్‌కు ₹45.',
+        'మసాలాలు మరియు డ్రై ఫ్రూట్స్‌లో ప్రామాణిక రేటు ₹40. గసగసాలు ₹45, మరియు కొబ్బరి, శొంఠి, మసాలా షీట్‌కు ₹50.',
       denom10Title: '₹10 ప్యాకెట్ రకం',
       denom10Price: '₹90 / షీట్',
       denom10Desc:
