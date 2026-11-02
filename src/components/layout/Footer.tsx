@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Store, ExternalLink } from 'lucide-react';
 import { CATEGORIES } from '../../data/products';
-import { BUSINESS_CONFIG, formatTelUrl, triggerPhoneCall } from '../../data/business';
+import { BUSINESS_CONFIG, formatTelUrl } from '../../data/business';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function Footer() {
@@ -90,12 +90,6 @@ export default function Footer() {
                 <a
                   key={phone.number}
                   href={formatTelUrl(phone.number)}
-                  target="_self"
-                  rel="noopener noreferrer"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    triggerPhoneCall(phone.number);
-                  }}
                   className="flex items-center gap-2.5 text-slate-300 hover:text-emerald-400 transition-colors font-bold cursor-pointer"
                 >
                   <Phone className="h-4 w-4 text-emerald-400 shrink-0" />

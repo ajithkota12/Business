@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Search, Menu, X, Store, Phone } from 'lucide-react';
 import { CATEGORIES } from '../../data/products';
-import { BUSINESS_CONFIG, formatTelUrl, triggerPhoneCall } from '../../data/business';
+import { BUSINESS_CONFIG } from '../../data/business';
 import ContactModal from '../ui/ContactModal';
 import LanguageToggle from '../ui/LanguageToggle';
 import { useLanguage } from '../../context/LanguageContext';
@@ -43,18 +43,9 @@ export default function Navbar() {
               <span>{t.common.directContactNumbers}</span>
               {BUSINESS_CONFIG.phones.map((phone, idx) => (
                 <span key={phone.number} className="inline-flex items-center gap-1">
-                  <a
-                    href={formatTelUrl(phone.number)}
-                    target="_self"
-                    rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      triggerPhoneCall(phone.number);
-                    }}
-                    className="underline hover:text-emerald-200 font-bold cursor-pointer"
-                  >
+                  <span className="font-bold text-emerald-100">
                     {phone.display}
-                  </a>
+                  </span>
                   {idx < BUSINESS_CONFIG.phones.length - 1 && <span className="opacity-60">,</span>}
                 </span>
               ))}
